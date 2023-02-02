@@ -47,5 +47,37 @@ const SearchBar = () => {
         });
       }
 
+      return (
+        <div>
+        <input
+        type="text"
+        placeholder="Search here"
+        onChange={handleChange}
+        value={searchInput} />
+
+<table>
+  <tr>
+    <th>Country</th>
+    <th>Continent</th>
+  </tr>
+
+{countries.map((country)=> {
+
+<div>
+  <tr>
+    <td>{country.name}</td>
+    <td>{country.continent}</td>
+  </tr>
+</div>
+
+})}
+</table>
+
+
+   
+        
+        </div>
+      )
+
 
 }
